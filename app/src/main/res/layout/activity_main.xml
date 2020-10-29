@@ -12,14 +12,14 @@
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_poster_top"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rv_movie"
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:layout_marginStart="14dp"
@@ -27,7 +27,8 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_movie_horizontal" />
 
     <TextView
         android:id="@+id/textView"
@@ -39,7 +40,7 @@
         android:text="All Movie"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/rv_movie"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -50,6 +51,6 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/montserrat"
         android:text="View All"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/rv_movie"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
