@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_all_movie.*
 
 class MainActivity : AppCompatActivity() {
     private var dataList = ArrayList<FilmModel>()
@@ -13,6 +14,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         rv_movie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        loadDataSample()
+
+        rv_movie.adapter = MovieAdapter(dataList){
+            val intent = Intent(this, DetailActivity::class.java)
+                .putExtra("data", it)
+            startActivity(intent)
+        }
+
+        tv_view_all.setOnClickListener {
+            val intent = Intent(this, AllMovieActivity::class.java)
+                .putExtra("data", dataList)
+            startActivity(intent)
+        }
+    }
+
+    private fun loadDataSample() {
         dataList.add(
             FilmModel(
                 "1",
@@ -68,11 +86,5 @@ class MainActivity : AppCompatActivity() {
                 0.0F
             )
         )
-
-        rv_movie.adapter = MovieAdapter(dataList){
-            val intent = Intent(this, DetailActivity::class.java)
-                .putExtra("data", it)
-            startActivity(intent)
-        }
     }
 }
