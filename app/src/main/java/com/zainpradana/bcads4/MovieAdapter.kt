@@ -30,7 +30,7 @@ class MovieAdapter( private var data: List<FilmModel>,
     override fun getItemCount(): Int = data.size
 
     class MovieViewHolder(view : View) :RecyclerView.ViewHolder(view){
-        private val tvTitle: TextView = view.findViewById(R.id.tv_title)
+        private val tvTitle: TextView = view.findViewById(R.id.tv_title_detail)
         private val ivPoster: ImageView = view.findViewById(R.id.iv_poster)
 
         //Menampilkan Data
