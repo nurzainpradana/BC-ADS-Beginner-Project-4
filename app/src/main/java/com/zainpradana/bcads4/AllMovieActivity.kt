@@ -21,7 +21,7 @@ class AllMovieActivity : AppCompatActivity() {
 
         rv_all_movie.layoutManager = LinearLayoutManager(this)
 
-        rv_all_movie.adapter = MovieAdapter(dataList){
+        rv_all_movie.adapter = AllMovieAdapter(dataList){
             val intent = Intent(this, DetailActivity::class.java)
                 .putExtra("data", it)
             startActivity(intent)

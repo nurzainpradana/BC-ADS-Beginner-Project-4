@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 "Action",
                 R.drawable.ic_ad_astra,
                 R.raw.video_a_rainy_day,
-                0.0F
+                4.0F
             )
         )
         dataList.add(
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 "Action",
                 R.drawable.ic_avengers,
                 R.raw.video_sample,
-                0.0F
+                5.0F
             )
         )
         dataList.add(
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 "Action",
                 R.drawable.ic_poster_sonic,
                 R.raw.video_sonic,
-                0.0F
+                1.0F
             )
         )
         dataList.add(
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 "Action",
                 R.drawable.ic_avengers,
                 R.raw.video_sonic,
-                0.0F
+                2.0F
             )
         )
         dataList.add(
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                 "Action",
                 R.drawable.ic_poster_sonic,
                 R.raw.video_sample,
-                0.0F
+                3.0F
             )
         )
     }
